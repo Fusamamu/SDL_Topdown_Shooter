@@ -9,12 +9,13 @@
 #include "GameEngine.hpp"
 
 int main(int argc, const char * argv[]) {
+    
     GameEngine* GE = new GameEngine;
     
     GE->Init();
+    GE->LoadAssets();
     GE->RunLoop();
     GE->ShutDown();
-
     
     return 0;
 }

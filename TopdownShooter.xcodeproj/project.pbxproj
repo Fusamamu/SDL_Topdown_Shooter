@@ -16,6 +16,8 @@
 		AE94830C257BE940003596EE /* libSDL2_ttf-2.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AE94830A257BE940003596EE /* libSDL2_ttf-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		AE94830F257BEA3B003596EE /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE94830D257BEA3B003596EE /* GameEngine.cpp */; };
 		AE948312257BEF42003596EE /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE948310257BEF42003596EE /* GameObject.cpp */; };
+		B85412682580B2B200498143 /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B85412662580B2B200498143 /* Tile.cpp */; };
+		B854126B2580B57900498143 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B85412692580B57900498143 /* Grid.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +57,10 @@
 		AE948310257BEF42003596EE /* GameObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
 		AE948311257BEF42003596EE /* GameObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameObject.hpp; sourceTree = "<group>"; };
 		AE948315257BF5A2003596EE /* Utility.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utility.hpp; sourceTree = "<group>"; };
+		B85412662580B2B200498143 /* Tile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tile.cpp; sourceTree = "<group>"; };
+		B85412672580B2B200498143 /* Tile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tile.hpp; sourceTree = "<group>"; };
+		B85412692580B57900498143 /* Grid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
+		B854126A2580B57900498143 /* Grid.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Grid.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +98,16 @@
 			isa = PBXGroup;
 			children = (
 				AE948313257BEF47003596EE /* include */,
-				AE948301257BE8FE003596EE /* TopdownShooter.entitlements */,
 				AE9482F9257BE8DA003596EE /* main.cpp */,
+				AE94830E257BEA3B003596EE /* GameEngine.hpp */,
 				AE94830D257BEA3B003596EE /* GameEngine.cpp */,
+				AE948311257BEF42003596EE /* GameObject.hpp */,
 				AE948310257BEF42003596EE /* GameObject.cpp */,
+				B85412672580B2B200498143 /* Tile.hpp */,
+				B85412662580B2B200498143 /* Tile.cpp */,
+				B85412692580B57900498143 /* Grid.cpp */,
+				B854126A2580B57900498143 /* Grid.hpp */,
+				AE948301257BE8FE003596EE /* TopdownShooter.entitlements */,
 			);
 			path = TopdownShooter;
 			sourceTree = "<group>";
@@ -113,8 +125,6 @@
 		AE948313257BEF47003596EE /* include */ = {
 			isa = PBXGroup;
 			children = (
-				AE94830E257BEA3B003596EE /* GameEngine.hpp */,
-				AE948311257BEF42003596EE /* GameObject.hpp */,
 				AE948315257BF5A2003596EE /* Utility.hpp */,
 			);
 			path = include;
@@ -180,6 +190,8 @@
 				AE9482FA257BE8DA003596EE /* main.cpp in Sources */,
 				AE94830F257BEA3B003596EE /* GameEngine.cpp in Sources */,
 				AE948312257BEF42003596EE /* GameObject.cpp in Sources */,
+				B85412682580B2B200498143 /* Tile.cpp in Sources */,
+				B854126B2580B57900498143 /* Grid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,8 +313,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TopdownShooter/TopdownShooter.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D2AN7JKBL4;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = (
@@ -312,6 +324,7 @@
 					/usr/local/Cellar/sdl2_ttf/2.0.15/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -319,8 +332,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TopdownShooter/TopdownShooter.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D2AN7JKBL4;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = (
@@ -330,6 +343,7 @@
 					/usr/local/Cellar/sdl2_ttf/2.0.15/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

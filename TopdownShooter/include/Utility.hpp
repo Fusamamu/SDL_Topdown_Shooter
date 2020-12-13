@@ -19,4 +19,8 @@ struct Point{
 //    }
 };
 
+struct __Color{
+    SDL_Color white = {255, 255, 255, 255};
+};
+
 #endif /* Utility_hpp */
