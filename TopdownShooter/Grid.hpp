@@ -22,6 +22,8 @@ public:
     class Tile* GetTile(int row, int column) const;
     class Tile* GetTile(float posX, float posY) const;
     
+    void ProcessInput(SDL_Event e);
+    
 private:
     int m_row;
     int m_column;

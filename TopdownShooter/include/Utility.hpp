@@ -21,6 +21,7 @@ struct Point{
 
 struct __Color{
     SDL_Color white = {255, 255, 255, 255};
+    SDL_Color black = {0, 0, 0, 255};
 };
 
 #endif /* Utility_hpp */

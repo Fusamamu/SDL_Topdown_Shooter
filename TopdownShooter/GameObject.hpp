@@ -54,6 +54,9 @@ public:
     const int& GetWidth() const { return m_width; }
     const int& GetHeight() const { return m_height; }
     
+    SDL_Rect& GetDestRect()  { return m_destRect; }
+    SDL_Rect& GetSrcRect()  { return m_srcRect; }
+    
     
 private:
     class GameEngine* m_gameEngine;

@@ -28,7 +28,7 @@ void GameEngine::Init(){
 }
 
 void GameEngine::LoadAssets(){
-    m_grid = new Grid(3,3,this);
+    m_grid = new Grid(10,10,this);
     
 }
 
@@ -52,6 +52,9 @@ void GameEngine::ProcessInput(){
         default:
             break;
     }
+    
+    m_grid->ProcessInput(ev);
+    
 }
 
 void GameEngine::Update(){

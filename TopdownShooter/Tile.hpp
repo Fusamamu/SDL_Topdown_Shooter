@@ -19,10 +19,13 @@ public:
     void DisPlayDebug();
     
     void OnMouseHover();
+    void SetActive();
     
     float Get_G_Cost() const { return g_cost; }
     float Get_H_Cost() const { return h_cost; }
     float Get_F_Cost() const { return g_cost + h_cost; }
+    
+    void SetActive(bool active) { m_isActive = active; }
     
 private:
     int iX; //index x, row
@@ -35,8 +38,14 @@ private:
     Tile* parent;
 
     bool m_isActive;
-    
+    bool isWall;
+    bool isOpenlist;
+    bool isCloselist;
+    bool isPath;
+
     SDL_Texture* m_text;
+    const char* debugLabel;
+    
     
 };
 
